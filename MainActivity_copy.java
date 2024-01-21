@@ -395,23 +395,26 @@ public class MainActivity_copy extends CameraActivity  implements CvCameraViewLi
                         Point[] vertices = new Point[4];
                         rotatedRect.points(vertices);
                         //for (int j = 0; j < 4; j++)
-                        if (vertices[2].x - vertices[3].x > 100) {
+                        if (vertices[2].x - vertices[3].x > 200) {
                             midpoint_x = (vertices[2].x + vertices[3].x) / 2;
                             midpoint_y = (vertices[2].y + vertices[3].y) / 2;
                             // 0    1
                             // 3    2
                             //
-                            // 0    1024
+                            // 0  <-  1024
+                            // ^
+                            // |
                             // 724
                             Imgproc.circle(mOutFrameMat, new Point(midpoint_x,midpoint_y), 40, new Scalar(255.0,0.0,0.0), 2);
                             Imgproc.line(mOutFrameMat, vertices[3], vertices[2], boxColor, 2);
                         }
 
                         if (midpoint_y < FRAME_HEIGHT_HALF) {
-                            z = 0;
-                        } else {
-                            z = 1;
+                            actionOutput = "3";
+                            writeToArduino(actionOutput);
                         }
+
+                        actionOutput = "4";
                     }
                 }
                 break;
