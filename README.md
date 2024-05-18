@@ -1,3 +1,5 @@
+Submitted to UTRA HACKS 2024 [https://devpost.com/software/shoresweep]
+
 # Requirements
 - Required < Android v.11
 - Opencv 3.9
