@@ -1,4 +1,4 @@
-Submitted to UTRA HACKS 2024 [https://devpost.com/software/shoresweep]
+Submitted to UTRA HACKS 2024 26 hours hackathon [https://devpost.com/software/shoresweep]
 
 # Requirements
 - Required < Android v.11
